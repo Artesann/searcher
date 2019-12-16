@@ -38,6 +38,7 @@ newList=list(map(lambda x: x.split(' '), listOfPDF))
 flatSet = set([item for sublist in newList for item in sublist])
 newSet=set()
 therms=set()
+
 for word in flatSet:
     for x in word:
         if not x.isalpha():
