@@ -15,7 +15,7 @@ id INT PRIMARY KEY AUTO_INCREMENT,
 file_name VARCHAR(100) NOT NULL UNIQUE
 );
 
-CREATE TABLE term_links
+CREATE TABLE TermsOfFiles
 (
 file_id INT,
 term_id INT,
