@@ -1,0 +1,26 @@
+DROP DATABASE IF EXISTS thesaurus;
+
+CREATE DATABASE thesaurus;
+USE thesaurus;
+
+CREATE TABLE Terms
+(
+id INT PRIMARY KEY AUTO_INCREMENT,
+term VARCHAR(20) NOT NULL UNIQUE
+);
+
+CREATE TABLE Files
+(
+id INT PRIMARY KEY AUTO_INCREMENT,
+file_name VARCHAR(100) NOT NULL UNIQUE
+);
+
+CREATE TABLE term_links
+(
+file_id INT,
+term_id INT,
+term_count INT
+);
+
+CREATE USER 'user'@'192.168.%' IDENTIFIED BY 'pass';
+GRANT ALL PRIVILEGES ON thesaurus.* TO 'user'@'192.168.%'
