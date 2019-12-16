@@ -6,8 +6,7 @@ USE thesaurus;
 CREATE TABLE Terms
 (
 id INT PRIMARY KEY AUTO_INCREMENT,
-term VARCHAR(20) NOT NULL UNIQUE,
-count_links INT
+term VARCHAR(20) NOT NULL UNIQUE
 );
 
 CREATE TABLE Files
@@ -18,16 +17,9 @@ file_name VARCHAR(100) NOT NULL UNIQUE
 
 CREATE TABLE term_links
 (
-term_from INT,
-term_to INT,
-UNIQUE(term_from, term_to)
-);
-
-CREATE TABLE term_file
-(
-file_name INT NOT NULL,
-term INT NOT NULL,
-count_term INT NOT NULL
+file_id INT,
+term_id INT,
+term_count INT
 );
 
 CREATE USER 'user'@'192.168.%' IDENTIFIED BY 'pass';
