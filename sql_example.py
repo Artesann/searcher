@@ -12,12 +12,13 @@ cursor = mydb.cursor()
 
 
 
-#sql = "INSERT INTO Terms (term) VALUES ('kekeson')"
-#val = ("kukus")
+sql = "INSERT INTO Terms (term) VALUES ('kekeson'), ('kek')"
 
-#cursor.execute(sql)
+if()
 
-#mydb.commit()
+cursor.execute(sql)
+
+mydb.commit()
 
 #print(cursor.rowcount, "was inserted.")
 
