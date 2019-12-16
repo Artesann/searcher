@@ -10,14 +10,16 @@ mydb = mysql.connector.connect(
 
 cursor = mydb.cursor()
 
-sql = "INSERT INTO Terms (term) VALUES ('kekeson')"
-val = ("kukus")
 
-cursor.execute(sql)
 
-mydb.commit()
+#sql = "INSERT INTO Terms (term) VALUES ('kekeson')"
+#val = ("kukus")
 
-print(cursor.rowcount, "was inserted.")
+#cursor.execute(sql)
+
+#mydb.commit()
+
+#print(cursor.rowcount, "was inserted.")
 
 
 #cursor.execute("SELECT * FROM Terms")
