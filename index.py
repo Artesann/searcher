@@ -30,10 +30,9 @@ def insert (file, terms):
     for term, count in terms.items():
         if not existTerm(term):
             cursor.execute("INSERT INTO Terms (term) VALUES ('"+ term +"')")
-            cursor.execute("INSERT INTO TermsOfFiles VALUES (" +
-                str(fileId) + ", " +
-                "(SELECT id FROM Terms WHERE term = '"+ term +"')," +
-                str(count) +")")
+        cursor.execute("INSERT INTO TermsOfFiles VALUES (" +
+            str(fileId) + ", " +
+            "(SELECT id FROM Terms WHERE term = '"+ term +"')," +
+            str(count) +")")
 
     mydb.commit()
-
