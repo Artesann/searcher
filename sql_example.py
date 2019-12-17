@@ -14,19 +14,17 @@ cursor = mydb.cursor()
 
 sql = "INSERT INTO Terms (term) VALUES ('kekeson'), ('kek')"
 
-if()
-
 cursor.execute(sql)
 
 mydb.commit()
 
-#print(cursor.rowcount, "was inserted.")
+print(cursor.rowcount, "was inserted.")
 
 
-#cursor.execute("SELECT * FROM Terms")
+cursor.execute("SELECT * FROM Terms")
 
-#myresult = cursor.fetchall()
+myresult = cursor.fetchall()
 
-#for x in myresult:
-#  print(x)
+for x in myresult:
+  print(x)
 
